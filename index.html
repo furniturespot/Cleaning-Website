@@ -18,12 +18,12 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #000;
+      background-color: #ffffff;
       color: #fff;
     }
 
     header {
-      background-color: #000000;
+      background-color: #ffffff;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -32,6 +32,8 @@
       z-index: 1000;
       margin-top: 1px;
       margin-bottom: 1px;
+      text-decoration: #000000;
+      
     }
 
     .logo img {
@@ -46,14 +48,16 @@
     }
 
     nav a {
-      color: #fff;
+      color: #000000;
       text-decoration: none;
       padding: 10px;
     }
 
     nav a:hover, nav .active {
-      background-color: #e60000;
-      border-radius: 5px;
+      background-color: #fc0000;
+      border-radius: 50px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      
     }
 
     .menu-toggle {
@@ -65,14 +69,14 @@
     .menu-toggle div {
       width: 25px;
       height: 3px;
-      background-color: #fff;
+      background-color: #ff0000;
       margin: 4px 0;
     }
 
     .mobile-nav {
       display: none;
       flex-direction: column;
-      background-color: #242323;
+      background-color: #ffffff;
       position: absolute;
       top: 60px;
       left: 0;
@@ -82,14 +86,14 @@
     .mobile-nav a {
       padding: 15px 20px;
       border-top: 1px solid #ff4d4d;
-      color: #fff;
+      color: #000000;
       text-decoration: none;
       text-align: center;
       text-shadow: #bbb;
     }
 
     .mobile-nav a:hover {
-      background-color: #240b0b;
+      background-color: #ffffff;
     }
 
     .hero {
@@ -98,7 +102,7 @@
       align-items: center;
       padding: 40px 20px;
       gap: 30px;
-      background-color: #111;
+      background-color: #ffffff;
     }
 
     .hero-text {
@@ -116,17 +120,18 @@
       font-size: 2.5rem;
       font-weight: 600;
       margin-bottom: 20px;
+      color: #ff0000;
     }
 
     .hero-text p {
-      color: #ccc;
+      color: #000000;
       margin-bottom: 20px;
       font-weight: 300;
     }
 
     .hero-text .btn {
       background-color: #e60000;
-      color: #fff;
+      color: #ffffff;
       padding: 12px 24px;
       border: none;
       border-radius: 25px;
@@ -200,12 +205,12 @@
     </div>
     <nav>
       <a href="#" class="active">Home</a>
-      <a href="#">Services</a>
-      <a href="#">About</a>
-      <a href="#">Reviews</a>
-      <a href="#">Pricing</a>
+      <a href="#services">Services</a>
+      <a href="#aboutus">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#pricing">Pricing</a>
     
-      <a href="#">Contact</a>
+      <a href="#contactus">Contact</a>
     </nav>
     <div class="mobile-nav" id="mobile-nav">
       <a href="#" class="active">Home</a>
@@ -221,13 +226,13 @@
 <br>
   <section class="hero">
     <div class="hero-image">
-      <img src="https://static.vecteezy.com/system/resources/previews/041/643/148/non_2x/ai-generated-cleaning-service-bucket-with-sponges-chemicals-bottle-free-png.png" alt="Cleaning Image">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgnQF6lq9Nn-8m1xBFQe3Om2ySCEJZs1QI4FHqhpjqcy3DbgmfJUAid6xP3wVsAMM6rJ8mjFk6bwmFasoBlN0iiNZ3PABiRYtboKjlVDlYHyaZTlAQxaoYSTUZb5BXjlOSdUT1DHuftA_zbuwAUdBxB6DU6msCS5poj1klQBtzM9ltKNXFhBbiSNhLPP4A/s2128/1000098509.png" alt="Cleaning Image">
     </div>
     <div class="hero-text">
       <h2>SAVE TIME FOR YOUR FAMILY.</h2>
       <h1>WE CLEAN FOR YOU!</h1>
       <p>At ALSAMER, we don't just clean — we care. Our goal is to contribute to healthier, more productive spaces that empower people to live and work better.</p>
-      <a href="#" class="btn">SEE OUR OFFER</a>
+      <a href="#" class="btn">BOOK NOW</a>
     </div>
   </section>
 
@@ -263,7 +268,7 @@
 
 
 
-
+<section class="services" id="services">
 
 <!DOCTYPE html>
 <html lang="en">
@@ -284,7 +289,7 @@
 
     .service-box {
       flex: 1 1 45%;
-      background-color: #111;
+      background-color: #ffffff;
       padding: 20px;
       border-radius: 10px;
       
@@ -295,9 +300,12 @@
       font-size: 1.5rem;
       margin-bottom: 5px;
     }
-
+.services-section1 h2{
+  color: #ff0000;
+  font-size: 40px;
+}
     .service-box h3 {
-      color: #aaa;
+      color: #000000;
       font-size: 1rem;
       margin-bottom: 20px;
     }
@@ -311,7 +319,7 @@
 
     .service-box p {
       font-size: 0.95rem;
-      color: #ccc;
+      color: #000000;
       margin: 20px 0;
     }
 
@@ -328,7 +336,7 @@
     }
 
     .columns ul li {
-      color: #ff4d4d;
+      color: #ff0000;
       font-size: 0.9rem;
       margin-bottom: 5px;
     }
@@ -354,7 +362,7 @@
       .service-box {
         flex: 1 1 100%;
       }
-
+    
       .columns {
         flex-direction: column;
         align-items: center;
@@ -363,10 +371,15 @@
   </style>
 </head>
 <body>
-<br><br><br>
+<br>
+<div class="services-section1">
+<center><h2>OUR SERVICES</h2></center></div>
+<br><br>
   <div class="services-section">
     <!-- Commercial -->
+     
     <div class="service-box">
+      
       <center><h2>COMMERCIAL CLEANING</h2>
       <br><br>
       <img src="https://img.freepik.com/premium-photo/man-standing-corridor-building_1048944-27375523.jpg?semt=ais_items_boosted&w=740" alt="Commercial Cleaning">
@@ -425,7 +438,7 @@
 
 </body>
 </html>
-
+</section>
 
 
 
@@ -444,7 +457,7 @@
 
 
 
-
+<section class="aboutus" id="aboutus">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -452,17 +465,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us - ALSAMER General Cleaning LLC OPC</title>
   <style>
-  <style>
+  
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
+      background-color: #ffffff;
       color: #fff;
     }
 
     .about-section {
       padding: 60px 20px;
-      background-color: #000;
+      background-color: #ffffff;
       text-align: justify;
     }
 
@@ -477,7 +490,7 @@
       margin: auto;
       line-height: 1.8;
       font-size: 17px;
-      color: #ddd;
+      color: #000000;
     }
 
     .founder {
@@ -503,7 +516,7 @@
 
     .founder span {
       font-size: 16px;
-      color: #ccc;
+      color: #000000;
     }
 
     .founder-text {
@@ -533,7 +546,7 @@
 <body>
 
 <section class="about-section">
-  <center><h2>About Us</h2></center>
+  <center><h2>ABOUT US</h2></center>
   <p>
     At <strong>ALSAMER General Cleaning LLC OPC</strong>, we believe that cleanliness is not just a service — it's a standard of life. Founded with a vision to deliver high-quality, reliable, and detail-oriented cleaning services, our company has grown into a trusted name across residential, commercial, and industrial sectors in the UAE. We offer a wide range of professional cleaning solutions designed to meet the diverse needs of our clients, with a strong commitment to excellence, safety, and customer satisfaction.
   </p><br>
@@ -566,7 +579,7 @@
 </body>
 </html>
 
-
+</section>
 
 
 
@@ -623,7 +636,7 @@
 <style>
  
 .why-choose-us {
-  background-color: #111;
+  background-color: #ffffff;
   text-align: center;
   padding: 60px 20px;
 }
@@ -633,7 +646,7 @@
 }
 
 .main-icon {
-  background-color: #111;
+  background-color: #ffffff;
   border: 3px solid red;
   border-radius: 50%;
   width: 90px;
@@ -658,7 +671,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 10px;
 }
 
 .feature {
@@ -666,7 +679,7 @@
   padding: 20px;
   border: 1px solid red;
   border-radius: 10px;
-  background-color: #1a1a1a;
+  background-color: #ffffff;
   transition: transform 0.3s ease;
 }
 
@@ -683,7 +696,7 @@
 
 .feature h3 {
   font-size: 18px;
-  color: #fff;
+  color: #000000;
   border-bottom: 2px solid red;
   display: inline-block;
   padding-bottom: 5px;
@@ -691,7 +704,7 @@
 }
 
 .feature p {
-  color: #ccc;
+  color: #000000;
   font-size: 14px;
 }
 
@@ -724,20 +737,19 @@
 
 
 
-
-
+<section class="pricing" id="pricing">
 <br><br><br>
 <section class="pricing-section">
   <h2>CHOOSE YOUR PRICING PLAN</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, iusto?</p>
+<BR><BR>
 
   <div class="pricing-cards">
     <div class="card">
       <h3>Start Plan</h3>
       <div class="price">
-        <sup>$</sup>19<sup>95</sup>
+        <sup>AED</sup>60</sup>
       </div>
-      <p class="per-hour">Per Hour</p>
+      <p class="per-hour">2 Hours</p>
       <ul>
         <li>Experienced & Trained Cleaner</li>
         <li><span>Maintenance</span> Cleaning Insured</li>
@@ -750,9 +762,9 @@
     <div class="card">
       <h3>Standard Plan</h3>
       <div class="price">
-        <sup>$</sup>29<sup>95</sup>
+        <sup>AED</sup>85</sup>
       </div>
-      <p class="per-hour">Per Hour</p>
+      <p class="per-hour">3 Hours</p>
       <ul>
         <li>Experienced & Trained Cleaner</li>
         <li><span>Maintenance</span> Cleaning Insured</li>
@@ -765,9 +777,9 @@
     <div class="card">
       <h3>Premium Plan</h3>
       <div class="price">
-        <sup>$</sup>59<sup>95</sup>
+        <sup>AED</sup>105</sup>
       </div>
-      <p class="per-hour">Per Hour</p>
+      <p class="per-hour">4 Hours</p>
       <ul>
         <li>Experienced & Trained Cleaner</li>
         <li><span>Maintenance</span> Cleaning Insured</li>
@@ -782,7 +794,7 @@
   body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #111;
+  background-color: #ffffff;
   color: #fff;
 }
 
@@ -798,7 +810,7 @@
 }
 
 .pricing-section p {
-  color: #bbb;
+  color: #000000;
   margin-bottom: 40px;
   font-size: 15px;
 }
@@ -806,18 +818,19 @@
 .pricing-cards {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 90px;
   flex-wrap: wrap;
 }
 
 .card {
-  background-color: #1a1a1a;
+  background-color: #ffffff;
   border: 1px solid red;
   padding: 30px 20px;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
   width: 300px;
   transition: transform 0.3s;
+  
 }
 
 .card:hover {
@@ -843,7 +856,7 @@
 }
 
 .per-hour {
-  color: #aaa;
+  color: #000000;
   margin-bottom: 20px;
 }
 
@@ -855,7 +868,7 @@
 
 .card ul li {
   margin-bottom: 10px;
-  color: #ddd;
+  color: #000000;
 }
 
 .card ul li span {
@@ -894,6 +907,7 @@
 </style>
 </body>
 </html>
+</section>
 
 
 
@@ -911,8 +925,7 @@
 
 
 
-
-
+<section class="reviews" id="reviews">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -923,7 +936,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
+      background-color: #ffffff;
       color: #fff;
     }
 
@@ -942,7 +955,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(17, 17, 17, 0.8);
+      background-color: rgba(255, 255, 255, 0.8);
       z-index: 0;
     }
 
@@ -957,7 +970,7 @@
     .subtext {
       position: relative;
       z-index: 1;
-      color: #ccc;
+      color: #000000;
       max-width: 700px;
       margin: 0 auto 50px;
       font-size: 16px;
@@ -1001,12 +1014,12 @@
 
     .location {
       font-size: 14px;
-      color: #bbb;
+      color: #000000;
     }
 
     .review-text {
       font-size: 15px;
-      color: #ddd;
+      color: #000000;
       margin: 15px 0;
       line-height: 1.5;
     }
@@ -1043,7 +1056,7 @@
       height: 10px;
       width: 10px;
       margin: 0 5px;
-      background-color: #aaa;
+      background-color: #000000;
       border-radius: 50%;
       display: inline-block;
       cursor: pointer;
@@ -1073,21 +1086,21 @@
       <div class="testimonial active">
         <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer">
         <h3>Amonde Willam</h3>
-        <p class="location">New York, USA</p>
+        <p class="location">Dubai, UAE</p>
         <p class="review-text">“Absolutely loved the service! The team was punctual, professional, and left my place spotless. Will book again.”</p>
       </div>
 
       <div class="testimonial">
         <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Customer">
         <h3>John Doe</h3>
-        <p class="location">Los Angeles, USA</p>
+        <p class="location">Al Ain, UAE</p>
         <p class="review-text">“Very impressed with the attention to detail. My house has never looked cleaner. Highly recommended!”</p>
       </div>
 
       <div class="testimonial">
         <img src="https://randomuser.me/api/portraits/women/46.jpg" alt="Customer">
         <h3>Emily Clark</h3>
-        <p class="location">London, UK</p>
+        <p class="location">Abu-Dhabi, UAE</p>
         <p class="review-text">“They exceeded my expectations! The cleaners were friendly and very thorough. A+ service!”</p>
       </div>
 
@@ -1135,6 +1148,7 @@
 </body>
 </html>
 
+</section>
 
 
 
@@ -1152,8 +1166,7 @@
 
 
 
-
-
+<section class="contactus" id="contactus">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1164,13 +1177,13 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
+      background-color: #ffffff;
       color: #fff;
     }
 
     .contact-section {
       padding: 60px 20px;
-      background-color: #111;
+      background-color: #ffffff;
     }
 
     .contact-section h2 {
@@ -1183,7 +1196,7 @@
     .contact-section p {
       text-align: center;
       font-size: 16px;
-      color: #ccc;
+      color: #000000;
       margin-bottom: 40px;
     }
 
@@ -1198,7 +1211,7 @@
 
     .contact-form {
       flex: 1 1 400px;
-      background-color: #1a1a1a;
+      background-color: #ffffff;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
@@ -1209,16 +1222,16 @@
       width: 100%;
       padding: 12px;
       margin-bottom: 20px;
-      border: 1px solid #333;
+      border: 1px solid #ff0000;
       border-radius: 5px;
-      background-color: #222;
+      background-color: #ffffff;
       color: #fff;
       font-size: 14px;
     }
 
     .contact-form input::placeholder,
     .contact-form textarea::placeholder {
-      color: #888;
+      color: #000000;
     }
 
     .contact-form textarea {
@@ -1267,7 +1280,7 @@
 
   <section class="contact-section">
     <h2>CONTACT OUR TEAM</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ab?</p>
+    <BR><BR>
 
     <div class="contact-container">
       <!-- Contact Form -->
@@ -1293,3 +1306,4 @@
 
 </body>
 </html>
+</section>
