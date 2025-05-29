@@ -33,6 +33,8 @@
       margin-top: 1px;
       margin-bottom: 1px;
       text-decoration: #000000;
+      margin-left: 200px;
+      margin-right: 150px;
       
     }
 
@@ -96,19 +98,17 @@
       background-color: #ffffff;
     }
 
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 40px 20px;
-      gap: 30px;
-      background-color: #ffffff;
-    }
-
-    .hero-text {
-      flex: 1;
-      max-width: 600px;
-    }
+   .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px; /* 2px space between video and text */
+  padding: 20px;
+}
+   .hero-text {
+  max-width: 500px;
+  padding-left: 10px;
+}
 
     .hero-text h2 {
       font-size: 1.5rem;
@@ -142,12 +142,7 @@
       text-align: center;
     }
 
-    .hero-image {
-      flex: 1;
-      max-width: 600px;
-      margin-left: 200px;
-      
-    }
+  
 
     .hero-image img {
       width: 100%;
@@ -155,6 +150,11 @@
     }
 
     @media (max-width: 768px) {
+      header{
+        margin-left: 0px;
+        margin-right: 1px;
+      }
+      
       nav {
         display: none;
       }
@@ -188,6 +188,44 @@
         margin: 0 auto;
       }
     }
+    /* Base styles (applies to all screen sizes) */
+.hero-video {
+  width: 50%;
+  overflow: hidden;
+  border-radius: 12px;
+   margin-right: -10px; /* Moves video slightly to the left */
+}
+
+.hero-video video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 4px solid red;
+}
+
+/* Laptop/Desktop screens */
+@media (min-width: 768px) {
+  .hero-video {
+    max-width: 800px;
+  }
+
+  .hero-video video {
+    height: auto;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 767px) {
+  .hero-video {
+    width: 110%;
+    padding: 0 10px;
+  }
+
+  .hero-video video {
+    height: auto;
+  }
+}
+
   </style>
 </head>
 
@@ -196,8 +234,8 @@
   <header>
     
     <div class="logo">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiT73SJfSDoax8ybHklNMhMvXbzpaw4yn9zjbfoplwx0B5LAuvfxGMZSo5l4B4sOrSi4R2mNs592dZxsvIwz0hLdAYmF7z5SnqYUQb2bVmbvMvp8_9KrWke14-y-6XgG6MSAB-BW_Ls1stfq8BbQzK60znJGA1Q_S6FCot3g1ig2QOkCEVb_RTFXS3-zig/s675/1000098418.png" alt="Logo">
-    </div>
+      <center><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiT73SJfSDoax8ybHklNMhMvXbzpaw4yn9zjbfoplwx0B5LAuvfxGMZSo5l4B4sOrSi4R2mNs592dZxsvIwz0hLdAYmF7z5SnqYUQb2bVmbvMvp8_9KrWke14-y-6XgG6MSAB-BW_Ls1stfq8BbQzK60znJGA1Q_S6FCot3g1ig2QOkCEVb_RTFXS3-zig/s675/1000098418.png" alt="Logo">
+    </center></div>
     <div class="menu-toggle" id="menu-toggle">
       <div></div>
       <div></div>
@@ -225,9 +263,17 @@
   </header>
 <br>
   <section class="hero">
-    <div class="hero-image">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgnQF6lq9Nn-8m1xBFQe3Om2ySCEJZs1QI4FHqhpjqcy3DbgmfJUAid6xP3wVsAMM6rJ8mjFk6bwmFasoBlN0iiNZ3PABiRYtboKjlVDlYHyaZTlAQxaoYSTUZb5BXjlOSdUT1DHuftA_zbuwAUdBxB6DU6msCS5poj1klQBtzM9ltKNXFhBbiSNhLPP4A/s2128/1000098509.png" alt="Cleaning Image">
-    </div>
+
+
+
+   <div class="hero-video">
+  <video autoplay muted loop playsinline>
+    <source src="https://furniturespot.github.io/Cleaning-Website/WhatsApp%20Video%202025-05-29%20at%2021.58.06_c378b7cb.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
     <div class="hero-text">
       <h2>SAVE TIME FOR YOUR FAMILY.</h2>
       <h1>WE CLEAN FOR YOU!</h1>
@@ -284,11 +330,11 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 40px;
+      gap: 90px;
     }
 
     .service-box {
-      flex: 1 1 45%;
+      
       background-color: #ffffff;
       padding: 20px;
       border-radius: 10px;
@@ -371,7 +417,7 @@
   </style>
 </head>
 <body>
-<br>
+<br><br><br><br><br><br>
 <div class="services-section1">
 <center><h2>OUR SERVICES</h2></center></div>
 <br><br>
@@ -669,9 +715,10 @@
 
 .features {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 70px;
+  
 }
 
 .feature {
@@ -1295,7 +1342,7 @@
       <!-- Map -->
       <div class="map-container">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.8124128970563!2d35.51952731521273!3d33.8915795806486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f17113b5c8705%3A0x1d92b16e9aa60a44!2sRegus%20-%20Beirut%20Azariyah!5e0!3m2!1sen!2slb!4v1621841103764!5m2!1sen!2slb"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3637.2728110513613!2d55.7722!3d24.2672!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8ab7a9bf6cca51%3A0xc416777188f8d980!2z2KfZhNiz2KfZhdixINmE2YTZhti42KfZgdipINin2YTYudin2YXYqSBhbHNhbWVyIGdlbmVyYWwgY2xlYW5pbmc!5e0!3m2!1sen!2sin!4v1748533857259!5m2!1sen!2sin"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
@@ -1307,3 +1354,12 @@
 </body>
 </html>
 </section>
+
+
+
+
+
+
+
+
+
