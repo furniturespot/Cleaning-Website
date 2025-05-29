@@ -1,387 +1,1295 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>We Clean For You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
 
-    <title>Cleaning</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background-color: #000000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: relative;
+      z-index: 1000;
+      margin-top: 1px;
+      margin-bottom: 1px;
+    }
+
+    .logo img {
+      height: 70px;
+      width: 120px;
+      margin-left: 20px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    nav a:hover, nav .active {
+      background-color: #e60000;
+      border-radius: 5px;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 4px 0;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #242323;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+    }
+
+    .mobile-nav a {
+      padding: 15px 20px;
+      border-top: 1px solid #ff4d4d;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      text-shadow: #bbb;
+    }
+
+    .mobile-nav a:hover {
+      background-color: #240b0b;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 30px;
+      background-color: #111;
+    }
+
+    .hero-text {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .hero-text h2 {
+      font-size: 1.5rem;
+      color: #e60000;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      color: #ccc;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    .hero-text .btn {
+      background-color: #e60000;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .hero-image {
+      flex: 1;
+      max-width: 600px;
+      margin-left: 200px;
+      
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .mobile-nav.show {
+        display: flex;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-image {
+        order: 1;
+        width: 100%;
+        margin-left: 2px;
+      }
+
+      .hero-text {
+        order: 2;
+        padding: 20px;
+      }
+
+      .hero-text .btn {
+        display: inline-block;
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Start Header  -->
-    <header>
-  <div class="container">
+
+  <header>
+    
     <div class="logo">
-      <a href="#home">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjV6XZRO-JRUblMmikPfsPdeK0bWUe7SCdoc8HPR5l2VnATwaUFmAzwZ3Qvi7idLVwcu9iGC_GxraVD_ccEaIf8GMPYwy8if_N6E9Tvj0XWXLggqrekEwWyKNLrDgGrX4jTk98gIcncxcwWUbR-yjkYfa8AgnBkSKcVfHnTABJg_wCI1u-ak3X-g58AR50/s675/WhatsApp%20Image%202025-05-25%20at%2011.43.17_4d0b9a02.jpg" style="width: 100px; height: 60px;">
-      </a>
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiT73SJfSDoax8ybHklNMhMvXbzpaw4yn9zjbfoplwx0B5LAuvfxGMZSo5l4B4sOrSi4R2mNs592dZxsvIwz0hLdAYmF7z5SnqYUQb2bVmbvMvp8_9KrWke14-y-6XgG6MSAB-BW_Ls1stfq8BbQzK60znJGA1Q_S6FCot3g1ig2QOkCEVb_RTFXS3-zig/s675/1000098418.png" alt="Logo">
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="#">Reviews</a>
+      <a href="#">Pricing</a>
+    
+      <a href="#">Contact</a>
+    </nav>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#" class="active">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="#">Reviews</a>
+      <a href="#">Pricing</a>
+      
+      <a href="#">Contact</a>
+    </div>
+    
+  </header>
+<br>
+  <section class="hero">
+    <div class="hero-image">
+      <img src="https://static.vecteezy.com/system/resources/previews/041/643/148/non_2x/ai-generated-cleaning-service-bucket-with-sponges-chemicals-bottle-free-png.png" alt="Cleaning Image">
+    </div>
+    <div class="hero-text">
+      <h2>SAVE TIME FOR YOUR FAMILY.</h2>
+      <h1>WE CLEAN FOR YOU!</h1>
+      <p>At ALSAMER, we don't just clean — we care. Our goal is to contribute to healthier, more productive spaces that empower people to live and work better.</p>
+      <a href="#" class="btn">SEE OUR OFFER</a>
+    </div>
+  </section>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
+
+    menuToggle.addEventListener("click", () => {
+      mobileNav.classList.toggle("show");
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cleaning Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+
+
+    .services-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .service-box {
+      flex: 1 1 45%;
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      
+    }
+
+    .service-box h2 {
+      color: #e60000;
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+
+    .service-box h3 {
+      color: #aaa;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .service-box img {
+      width: 100%;
+      height: 300px;
+      border-radius: 30% 30% 0 0;
+      max-width: 400px;
+    }
+
+    .service-box p {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin: 20px 0;
+    }
+
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .columns ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .columns ul li {
+      color: #ff4d4d;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+    .request-button {
+  display: inline-block;
+  background-color: #e60000;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.request-button:hover {
+  background-color: #ff1a1a;
+}
+
+
+    @media (max-width: 768px) {
+      .service-box {
+        flex: 1 1 100%;
+      }
+
+      .columns {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+<br><br><br>
+  <div class="services-section">
+    <!-- Commercial -->
+    <div class="service-box">
+      <center><h2>COMMERCIAL CLEANING</h2>
+      <br><br>
+      <img src="https://img.freepik.com/premium-photo/man-standing-corridor-building_1048944-27375523.jpg?semt=ais_items_boosted&w=740" alt="Commercial Cleaning">
+      <p>Our Commercial Cleaning Services Includes:</p></center>
+      <div class="columns">
+        <br>
+        <ul>
+          <li>• Office</li>
+          <li>• Shops</li>
+          <li>• Medical Facilities</li>
+          <li>• Factories</li>
+          <li>• Restaurants</li>
+        </ul>
+        <ul>
+          <li>• Warehouses</li>
+          <li>• Airports</li>
+          <li>• Move In/Out</li>
+          <li>• Government Facilities</li>
+          <li>• Showrooms</li>
+        </ul>
+
+      </div>
+       <br><br>
+      <center><a href="#request-commercial" class="request-button">Request Service</a></center>
+
     </div>
 
-    <!-- Menu Icon -->
-   
-
-    <nav>
-      <ul>
-        <li><a href="#home" class="active">home</a></li>
-        <li><a href="#services">services</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#reviews">reviews</a></li>
-        <li><a href="#pricing">pricing</a></li>
-        <li><a href="#news">news</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-    <!-- End Header  -->
-    <!-- Start Home Section  -->
-    <section class="home" id="home">
-        <div class="container">
-            <div class="home-text">
-                <h2>save time for your family.</h2>
-                <h1>we clean for you!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis tempore reprehenderit enim maiores
-                    consequuntur assumenda iusto, quo sit nostrum beatae?</p>
-                <a href="#" class="btn">see our offer</a>
-            </div>
-            <div class="home-img">
-                <img src="img/header-img.png" alt="">
-            </div>
-        </div>
-    </section>
-    <!-- End Home Section  -->
-    <!-- Start Services Section  -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="serv-box">
-                <div class="serv-heading">
-                    <h3>commercial</h3>
-                    <h4>cleaning</h4>
-                </div>
-                <div class="serv-img">
-                    <img src="img/Cleaning-1.png" alt="">
-                </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae autem temporibus quas! Deserunt
-                    asperiores quidem id dolorum, animi aperiam rem?</p>
-                <div class="list">
-                    <ul>
-                        <li>office</li>
-                        <li>shops</li>
-                        <li>medical facilities</li>
-                        <li>factories</li>
-                        <li>restaurants</li>
-                    </ul>
-                    <ul>
-                        <li>warehouses</li>
-                        <li>airports</li>
-                        <li>move in/out</li>
-                        <li>gouvernment facilities</li>
-                        <li>showrooms</li>
-                    </ul>
-                </div>
-                <a href="#" class="btn">request an estimate</a>
-            </div>
-            <div class="serv-box">
-                <div class="serv-heading">
-                    <h3>residential</h3>
-                    <h4>cleaning</h4>
-                </div>
-                <div class="serv-img">
-                    <img src="img/Cleaning-2.png" alt="">
-                </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae autem temporibus quas! Deserunt
-                    asperiores quidem id dolorum, animi aperiam rem?</p>
-                <div class="list">
-                    <ul>
-                        <li>kitchen</li>
-                        <li>bathrooms</li>
-                        <li>bedrooms & living rooms</li>
-                        <li>windows</li>
-                        <li>extra services</li>
-                    </ul>
-                    <ul>
-                        <li>carpet</li>
-                        <li>seasonal</li>
-                        <li>move in/out</li>
-                        <li>past contruction</li>
-                        <li>express</li>
-                    </ul>
-                </div>
-                <a href="#" class="btn">request an estimate</a>
-            </div>
-        </div>
-        <div class="like">
-            <i class="fas fa-thumbs-up"></i>
-        </div>
-    </section>
-    <!-- End Services Section  -->
-    <!-- Start About Section  -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2>why choose us</h2>
-            <div class="about-container">
-                <div class="box">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>premium services</h3>
-                    <p>lorem ipsum dolor consectrtur adipisicing elit sedit dout.</p>
-                </div>
-                <div class="box">
-                    <i class="fas fa-dollar-sign"></i>
-                    <h3>cost</h3>
-                    <p>lorem ipsum dolor consectrtur adipisicing elit sedit dout.</p>
-                </div>
-                <div class="box">
-                    <i class="fas fa-hand-holding"></i>
-                    <h3>eco friendly</h3>
-                    <p>lorem ipsum dolor consectrtur adipisicing elit sedit dout.</p>
-                </div>
-                <div class="box">
-                    <i class="fab fa-bitbucket"></i>
-                    <h3>special equipment</h3>
-                    <p>lorem ipsum dolor consectrtur adipisicing elit sedit dout.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End About Section  -->
-    <!-- Start Reviews Section  -->
-    <section class="reviews" id="reviews">
-        <div class="container">
-            <h2>what customer say</h2>
-            <div class="review-content" id="review-content">
-                <div class="review-box active">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua ut enim ad minim veniam. Quis nostrud exercitation ullamco laboris
-                        nisi ut</p>
-                    <img src="img/p1.jpg" alt="">
-                    <div class="profile-desc">
-                        <h5>amonde willam</h5>
-                        <span>new york, USA</span>
-                    </div>
-                </div>
-                <div class="review-box">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua ut enim ad minim veniam. Quis nostrud exercitation ullamco laboris
-                        nisi ut</p>
-                    <img src="img/p2.jpg" alt="">
-                    <div class="profile-desc">
-                        <h5>amonde willam</h5>
-                        <span>new york, USA</span>
-                    </div>
-                </div>
-                <div class="review-box">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua ut enim ad minim veniam. Quis nostrud exercitation ullamco laboris
-                        nisi ut</p>
-                    <img src="img/p3.jpg" alt="">
-                    <div class="profile-desc">
-                        <h5>amonde willam</h5>
-                        <span>new york, USA</span>
-                    </div>
-                </div>
-                <div class="review-box">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua ut enim ad minim veniam. Quis nostrud exercitation ullamco laboris
-                        nisi ut</p>
-                    <img src="img/p4.jpg" alt="">
-                    <div class="profile-desc">
-                        <h5>amonde willam</h5>
-                        <span>new york, USA</span>
-                    </div>
-                </div>
-                <div class="review-box">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua ut enim ad minim veniam. Quis nostrud exercitation ullamco laboris
-                        nisi ut</p>
-                    <img src="img/p5.jpg" alt="">
-                    <div class="profile-desc">
-                        <h5>amonde willam</h5>
-                        <span>new york, USA</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
-        <span id="left-arrow" class="arrow left fa fa-chevron-left"></span>
-        <ul class="dots" id="review-dots">
-            <li class="dot active"></li>
-            <li class="dot"></li>
-            <li class="dot"></li>
-            <li class="dot"></li>
-            <li class="dot"></li>
+    <!-- Residential -->
+    <div class="service-box">
+      <center> <h2>RESIDENTIAL CLEANING</h2>
+      <br><br>
+      <img src="https://www.mycleaningservicespetalingjaya.com.my/wp-content/uploads/2022/08/house-cleaning-pj.jpg" alt="Residential Cleaning">
+      <p>Our Residential Cleaning Services Includes:</p></center>
+      <div class="columns">
+        <br>
+        <ul>
+          <li>• Kitchen</li>
+          <li>• Bathrooms</li>
+          <li>• Bedrooms & Living Rooms</li>
+          <li>• Windows</li>
+          <li>• Extra Services</li>
         </ul>
-    </section>
-    <!-- End Reviews Section  -->
-    <!-- Start Pricing Section  -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <h2>choose your pricing plan</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, iusto? Neque placeat quibusdam
-                necessitatibus officiis modi consectetur quidem nam esse.</p>
-            <div class="pricing-container">
-                <div class="price-box">
-                    <h3>start plan</h3>
-                    <div class="price">
-                        <span>$</span>
-                        19
-                        <span>95</span>
-                        <p>per hour</p>
-                    </div>
-                    <p>Experienced & Trained Cleaner <span>Maintenance</span>
-                        Cleaning Insured Liability & Damage Planned <span>Holiday</span>
-                        Cover You Choose Cleaning Day
-                    </p>
-                    <a href="#" class="btn">order now</a>
-                </div>
-                <div class="price-box">
-                    <h3>standard plan</h3>
-                    <div class="price">
-                        <span>$</span>
-                        29
-                        <span>95</span>
-                        <p>per hour</p>
-                    </div>
-                    <p>Experienced & Trained Cleaner <span>Maintenance</span>
-                        Cleaning Insured Liability & Damage Planned <span>Holiday</span>
-                        Cover You Choose Cleaning Day
-                    </p>
-                    <a href="#" class="btn">order now</a>
-                </div>
-                <div class="price-box">
-                    <h3>premium plan</h3>
-                    <div class="price">
-                        <span>$</span>
-                        59
-                        <span>95</span>
-                        <p>per hour</p>
-                    </div>
-                    <p>Experienced & Trained Cleaner <span>Maintenance</span>
-                        Cleaning Insured Liability & Damage Planned <span>Holiday</span>
-                        Cover You Choose Cleaning Day
-                    </p>
-                    <a href="#" class="btn">order now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Pricing Section  -->
-    <!-- Start News Section  -->
-    <section class="news" id="news">
-        <div class="container">
-            <h2>latest news about cleaning</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolor inventore voluptatibus
-                voluptatum sit odit neque eveniet officiis beatae. Sint obcaecati provident aliquam sed reprehenderit?
-            </p>
-            <div class="news-container">
-                <div class="new">
-                    <img src="img/new-1.png" alt="">
-                    <div class="new-text">
-                        <h3>new cleaning withhydrogen peroxide tips</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, laudantium.
-                        </p>
-                        <a href="#">learn more</a>
-                    </div>
-                </div>
-                <div class="new">
-                    <img src="img/new-2.png" alt="">
-                    <div class="new-text">
-                        <h3>how to clean your house with the new cleaning technology</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, laudantium.
-                        </p>
-                        <a href="#">learn more</a>
-                    </div>
-                </div>
-                <div class="new">
-                    <img src="img/new-3.png" alt="">
-                    <div class="new-text">
-                        <h3>try the new methods to clean your house easy</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, laudantium.
-                        </p>
-                        <a href="#">learn more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End News Section  -->
-    <!-- Start Contact Section  -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2>contact our team</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ab?</p>
-            <div class="contact-container">
-                <div class="contact-left">
-                    <form action="#">
-                        <div class="form-group">
-                            <input type="text" name="" placeholder="Enter Your Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="" placeholder="Enter Your email">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="" placeholder="Subject...">
-                        </div>
-                        <div class="form-group">
-                            <textarea name="" placeholder="Message Here ..."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button class="btn">Send <i class="fas fa-paper-plane"></i></button>
-                        </div>
-                    </form>
-                </div>
-                <div class="contact-right">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52989.10542598311!2d35.434775958203126!3d33.89431279999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f16e142563ebb%3A0xad8fa77b2ab4eb91!2sRegus%20-%20Beirut%20Azariyah!5e0!3m2!1sen!2slb!4v1657904114182!5m2!1sen!2slb"
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Contact Section  -->
-    <!-- Start Footer Section  -->
-    <footer>
-        <div class="container">
-            <div class="box">
-                <img src="img/black-logo.png" alt="">
-                <a href="#" class="btn">request an estimate</a>
-            </div>
-            <div class="box">
-                <h4>contact</h4>
-                <a href="tel:8009878830">800-987-8830</a>
-                <span>new york</span>
-                <span>United States, NY, 19425</span>
-                <a href="#" class="map">view map</a>
-            </div>
-            <div class="box">
-                <h4>subscribe toour newsletter</h4>
-                <div class="form">
-                    <input type="text" name="" placeholder="your@email.com">
-                    <button>send</button>
-                </div>
-                <div class="social-media">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2022 All Right Reserved <span>Mohamad Salimi</span></p>
-        </div>
-    </footer>
-    <!-- End Footer Section  -->
+        <ul>
+          <li>• Carpet</li>
+          <li>• Seasonal</li>
+          <li>• Move In/Out</li>
+          <li>• Post Construction</li>
+          <li>• Express</li>
+        </ul>
+      </div>
+      <br><br>
+     <center> <a href="#request-commercial" class="request-button">Request Service</a></center>
 
+    </div>
+  </div>
 
-    <script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
 </body>
+</html>
 
+
+
+
+<br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - ALSAMER General Cleaning LLC OPC</title>
+  <style>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .about-section {
+      padding: 60px 20px;
+      background-color: #000;
+      text-align: justify;
+    }
+
+    .about-section h2 {
+      color: #ff0000;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 17px;
+      color: #ddd;
+    }
+
+    .founder {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: justify;
+    }
+
+    .founder img {
+      border-radius: 50%;
+      max-width: 200px;
+      border: 4px solid #ff0000;
+      margin-bottom: 15px;
+    }
+
+    .founder h3 {
+      margin-top: 15px;
+      font-size: 24px;
+      color: #ff0000;
+    }
+
+    .founder span {
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .founder-text {
+      max-width: 800px;
+    }
+
+    @media (min-width: 768px) {
+      .founder {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+      }
+
+      .founder img {
+        margin-bottom: 0;
+      }
+
+      .founder-text {
+        margin-left: 30px;
+        text-align: left;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+<section class="about-section">
+  <center><h2>About Us</h2></center>
+  <p>
+    At <strong>ALSAMER General Cleaning LLC OPC</strong>, we believe that cleanliness is not just a service — it's a standard of life. Founded with a vision to deliver high-quality, reliable, and detail-oriented cleaning services, our company has grown into a trusted name across residential, commercial, and industrial sectors in the UAE. We offer a wide range of professional cleaning solutions designed to meet the diverse needs of our clients, with a strong commitment to excellence, safety, and customer satisfaction.
+  </p><br>
+  <p>
+    Our services are built around values of integrity, transparency, and professionalism. Every member of our team is trained to maintain the highest standards of hygiene and discretion, using only eco-friendly, non-toxic products and industry-approved equipment. Whether it's daily maintenance cleaning or deep cleaning projects, we deliver results that shine — literally and figuratively. Our operations are governed by strict quality control procedures, ensuring each task is executed to perfection and reviewed for client satisfaction.
+  </p><br>
+  <p>
+    What sets us apart is not only our expertise but also our dedication to building long-term relationships with our clients. We understand that every space is unique, and so are its cleaning needs. That’s why we offer personalized cleaning plans tailored to your schedule, preferences, and budget. From corporate offices and retail outlets to villas and apartment complexes, our solutions are customized to enhance cleanliness, safety, and wellbeing.
+  </p><br>
+
+  <div class="founder">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2L8oIAlgu9NyFLba4e_02Hs-rJ2i__EhVHfGLC3TgR4ym_WqXHoyUuGHuje1h3iZgrwqerRUcC15OVi600anek5_xhMVBhumwo39zemRkumspShMOGJWqJ2tsrhyphenhyphen2Nucxp0Pe6B-Bg1UMaz07LSnTkImHLp76_CkEVmXT0D7tKUCJWczjWvuX3ghM2E4/s320/WhatsApp%20Image%202025-05-24%20at%2013.16.09_459f54ab.jpg" alt="Samer Mustafa Ali Zaqzouq">
+    <div class="founder-text">
+      <h3>Samer Mustafa Ali Zaqzouq</h3>
+      <span>Founder & Managing Director</span>
+      <p>
+        The driving force behind ALSAMER General Cleaning LLC OPC is <strong>Samer Mustafa Ali Zaqzouq</strong>, a visionary entrepreneur with years of hands-on experience in the cleaning and facility management industry. His leadership philosophy centers around precision, professionalism, and personal accountability. With a sharp eye for detail and a passion for operational excellence, Samer has built a company culture rooted in hard work, integrity, and continuous improvement.
+      </p><br>
+      <p>
+        Under Samer’s direction, ALSAMER has grown from a humble startup into a reliable cleaning partner for dozens of clients across the UAE. His commitment to innovation and customer service continues to shape the company's path forward, ensuring we remain agile, responsive, and ahead of industry trends. Every project we take on is a reflection of Samer’s commitment to doing the job right — the first time and every time.
+      </p><br>
+    </div>
+  </div>
+
+  <p style="margin-top: 30px;">
+    At ALSAMER, we don't just clean — we care. Our goal is to contribute to healthier, more productive spaces that empower people to live and work better. Contact us today and discover how our expert team can elevate your environment through unmatched cleaning solutions.
+  </p>
+</section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+  <section class="why-choose-us">
+  <div class="icon-wrapper">
+    <div class="main-icon">
+      <i class="fas fa-thumbs-up"></i>
+    </div>
+  </div>
+  <h2>WHY CHOOSE US</h2>
+  <div class="features">
+    <div class="feature">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Premium Services</h3>
+      <p>We deliver unmatched quality services with professionalism.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-dollar-sign"></i><br>
+      <h3>Cost</h3>
+      <p>Our pricing is competitive with maximum value for your money.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-leaf"></i><br>
+      <h3>Eco Friendly</h3>
+      <p>We use sustainable and safe cleaning solutions.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-toolbox"></i>
+      <h3>Special Equipment</h3>
+      <p>Advanced tools and tech for effective cleaning results.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+ 
+.why-choose-us {
+  background-color: #111;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.icon-wrapper {
+  margin-bottom: 20px;
+}
+
+.main-icon {
+  background-color: #111;
+  border: 3px solid red;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  color: red;
+  font-size: 30px;
+}
+
+.why-choose-us h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: red;
+  font-weight: bold;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.feature {
+  max-width: 220px;
+  padding: 20px;
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px red;
+}
+
+.feature i {
+  font-size: 36px;
+  color: red;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 18px;
+  color: #fff;
+  border-bottom: 2px solid red;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 90%;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+<section class="pricing-section">
+  <h2>CHOOSE YOUR PRICING PLAN</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, iusto?</p>
+
+  <div class="pricing-cards">
+    <div class="card">
+      <h3>Start Plan</h3>
+      <div class="price">
+        <sup>$</sup>19<sup>95</sup>
+      </div>
+      <p class="per-hour">Per Hour</p>
+      <ul>
+        <li>Experienced & Trained Cleaner</li>
+        <li><span>Maintenance</span> Cleaning Insured</li>
+        <li>Liability & Damage Planned</li>
+        <li><span>Holiday</span> Cover You Choose Cleaning Day</li>
+      </ul>
+      <button class="order-btn">ORDER NOW</button>
+    </div>
+
+    <div class="card">
+      <h3>Standard Plan</h3>
+      <div class="price">
+        <sup>$</sup>29<sup>95</sup>
+      </div>
+      <p class="per-hour">Per Hour</p>
+      <ul>
+        <li>Experienced & Trained Cleaner</li>
+        <li><span>Maintenance</span> Cleaning Insured</li>
+        <li>Liability & Damage Planned</li>
+        <li><span>Holiday</span> Cover You Choose Cleaning Day</li>
+      </ul>
+      <button class="order-btn">ORDER NOW</button>
+    </div>
+
+    <div class="card">
+      <h3>Premium Plan</h3>
+      <div class="price">
+        <sup>$</sup>59<sup>95</sup>
+      </div>
+      <p class="per-hour">Per Hour</p>
+      <ul>
+        <li>Experienced & Trained Cleaner</li>
+        <li><span>Maintenance</span> Cleaning Insured</li>
+        <li>Liability & Damage Planned</li>
+        <li><span>Holiday</span> Cover You Choose Cleaning Day</li>
+      </ul>
+      <button class="order-btn">ORDER NOW</button>
+    </div>
+  </div>
+</section>
+<style>
+  body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+.pricing-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.pricing-section h2 {
+  color: red;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.pricing-section p {
+  color: #bbb;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid red;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #fff;
+  font-size: 22px;
+}
+
+.price {
+  color: red;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.price sup {
+  font-size: 18px;
+  vertical-align: super;
+}
+
+.per-hour {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.card ul li {
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.card ul li span {
+  color: red;
+}
+
+.order-btn {
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.order-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+</style>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimonial Carousel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .testimonial-section {
+      text-align: center;
+      padding: 60px 20px;
+      background: url('https://images.unsplash.com/photo-1600585154154-8eeb7c7ae81e') no-repeat center center/cover;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(17, 17, 17, 0.8);
+      z-index: 0;
+    }
+
+    .testimonial-section h2 {
+      color: red;
+      position: relative;
+      z-index: 1;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .subtext {
+      position: relative;
+      z-index: 1;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto 50px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .testimonial-slider {
+      position: relative;
+      z-index: 1;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .testimonial {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      transition: opacity 0.8s ease;
+      text-align: center;
+    }
+
+    .testimonial.active {
+      opacity: 1;
+      position: relative;
+    }
+
+    .testimonial img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid red;
+      margin-bottom: 15px;
+    }
+
+    .testimonial h3 {
+      color: red;
+      margin: 10px 0 5px;
+    }
+
+    .location {
+      font-size: 14px;
+      color: #bbb;
+    }
+
+    .review-text {
+      font-size: 15px;
+      color: #ddd;
+      margin: 15px 0;
+      line-height: 1.5;
+    }
+
+    .arrow {
+      background: none;
+      border: none;
+      color: red;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 10px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    .left {
+      left: -40px;
+    }
+
+    .right {
+      right: -40px;
+    }
+
+    .dots {
+      text-align: center;
+      margin-top: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: #aaa;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .active-dot {
+      background-color: red;
+    }
+
+    @media (max-width: 768px) {
+      .arrow.left { left: 0; }
+      .arrow.right { right: 0; }
+    }
+  </style>
+</head>
+<body>
+<br><br><br>
+  <section class="testimonial-section">
+    <h2>WHAT CUSTOMER SAY</h2>
+    <p class="subtext">
+      Here's what some of our happy customers have to say about our service.
+    </p>
+
+    <div class="testimonial-slider">
+      <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
+
+      <div class="testimonial active">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer">
+        <h3>Amonde Willam</h3>
+        <p class="location">New York, USA</p>
+        <p class="review-text">“Absolutely loved the service! The team was punctual, professional, and left my place spotless. Will book again.”</p>
+      </div>
+
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Customer">
+        <h3>John Doe</h3>
+        <p class="location">Los Angeles, USA</p>
+        <p class="review-text">“Very impressed with the attention to detail. My house has never looked cleaner. Highly recommended!”</p>
+      </div>
+
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/women/46.jpg" alt="Customer">
+        <h3>Emily Clark</h3>
+        <p class="location">London, UK</p>
+        <p class="review-text">“They exceeded my expectations! The cleaners were friendly and very thorough. A+ service!”</p>
+      </div>
+
+      <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <div class="dots">
+      <span class="dot active-dot" onclick="setSlide(0)"></span>
+      <span class="dot" onclick="setSlide(1)"></span>
+      <span class="dot" onclick="setSlide(2)"></span>
+    </div>
+  </section>
+
+  <script>
+    let currentSlide = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+    const dots = document.querySelectorAll('.dot');
+    let autoPlayInterval = setInterval(() => changeSlide(1), 5000);
+
+    function updateSlider() {
+      testimonials.forEach((el, idx) => {
+        el.classList.toggle('active', idx === currentSlide);
+        dots[idx].classList.toggle('active-dot', idx === currentSlide);
+      });
+    }
+
+    function changeSlide(n) {
+      currentSlide = (currentSlide + n + testimonials.length) % testimonials.length;
+      updateSlider();
+      resetAutoPlay();
+    }
+
+    function setSlide(n) {
+      currentSlide = n;
+      updateSlider();
+      resetAutoPlay();
+    }
+
+    function resetAutoPlay() {
+      clearInterval(autoPlayInterval);
+      autoPlayInterval = setInterval(() => changeSlide(1), 5000);
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Our Team</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .contact-section {
+      padding: 60px 20px;
+      background-color: #111;
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      font-size: 32px;
+      color: red;
+      margin-bottom: 10px;
+    }
+
+    .contact-section p {
+      text-align: center;
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .contact-form {
+      flex: 1 1 400px;
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #333;
+      border-radius: 5px;
+      background-color: #222;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #888;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .contact-form button {
+      background-color: red;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #cc0000;
+    }
+
+    .map-container {
+      flex: 1 1 400px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="contact-section">
+    <h2>CONTACT OUR TEAM</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ab?</p>
+
+    <div class="contact-container">
+      <!-- Contact Form -->
+      <form class="contact-form">
+        <input type="text" placeholder="Enter Your Name" required>
+        <input type="email" placeholder="Enter Your Email" required>
+        <input type="text" placeholder="Subject..." required>
+        <textarea placeholder="Message Here ..." required></textarea>
+        <button type="submit">SEND </button>
+      </form>
+
+      <!-- Map -->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.8124128970563!2d35.51952731521273!3d33.8915795806486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f17113b5c8705%3A0x1d92b16e9aa60a44!2sRegus%20-%20Beirut%20Azariyah!5e0!3m2!1sen!2slb!4v1621841103764!5m2!1sen!2slb"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+</body>
 </html>
