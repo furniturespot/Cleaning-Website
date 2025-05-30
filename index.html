@@ -109,7 +109,7 @@
     }
 
    .hero {
-  display: flex;
+  display: column;
   align-items: center;
   justify-content: center;
   gap: 60px; /* 2px space between video and text */
@@ -130,7 +130,7 @@
       font-size: 2.5rem;
       font-weight: 600;
       margin-bottom: 20px;
-      color: #ff0000;
+      color: #000000;
     }
 
     .hero-text p {
@@ -200,10 +200,10 @@
     }
     /* Base styles (applies to all screen sizes) */
 .hero-video {
-  width: 50%;
+  width: 90%;
   overflow: hidden;
   border-radius: 12px;
-   margin-right: -10px; /* Moves video slightly to the left */
+   
 }
 
 .hero-video video {
@@ -269,6 +269,57 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+
+
+
+
+.home-video-section {
+  position: relative;
+  width: 95vw;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95vw;
+  height: 80vh;
+  object-fit: cover;
+  z-index: -1;
+   border-radius: 10px;
+  border: 4px solid red;
+}
+
+.video-overlay-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.video-overlay-content h1 {
+  font-size: 3rem;
+  color: red;
+}
+
+.video-overlay-content .btn {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+
+
+
+
   </style>
 </head>
 
@@ -307,25 +358,47 @@
     
   </header>
 <br>
-  <section class="hero">
 
 
 
-   <div class="hero-video">
-  <video autoplay muted loop playsinline>
+
+
+<center><section class="home-video-section">
+  <video autoplay muted loop playsinline class="background-video">
     <source src="https://furniturespot.github.io/Cleaning-Website/WhatsApp%20Video%202025-05-29%20at%2021.58.06_c378b7cb.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-</div>
+ 
+</section></center>
 
 
-    <div class="hero-text">
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <center> <section class="hero">
+
+
+
+   
+
+
+  <div class="hero-text">
       <h2>SAVE TIME FOR YOUR FAMILY.</h2>
       <h1>WE CLEAN FOR YOU!</h1>
       <p>At ALSAMER, we don't just clean — we care. Our goal is to contribute to healthier, more productive spaces that empower people to live and work better.</p>
       <a href="#contactus" class="btn">BOOK NOW</a>
     </div>
-  </section>
+  </section></center>
 
   <script>
     const menuToggle = document.getElementById("menu-toggle");
